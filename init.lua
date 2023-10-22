@@ -3,11 +3,6 @@ local autocmd = vim.api.nvim_create_autocmd
 -- Auto resize panes when resizing nvim window
 autocmd("VimResized", { pattern = "*", command = "tabdo wincmd =", })
 autocmd("BufAdd", { command = "set rnu", })
-autocmd("BufWritePre", {
-    callback = function()
-        vim.lsp.buf.format()
-    end
-})
 
 autocmd({ "BufNewFile", "BufRead" }, {
     pattern = "*.go",

@@ -15,6 +15,9 @@ local plugins = {
                     require "custom.configs.null-ls"
                 end,
             },
+            {
+                "lukas-reineke/lsp-format.nvim",
+            },
         },
         config = function()
             require "plugins.configs.lspconfig"
@@ -134,6 +137,7 @@ local plugins = {
         "sindrets/diffview.nvim",
         cmd = { "DiffviewOpen", "DiffviewFileHistory", },
     },
+
     -- To make a plugin not be loaded
     -- {
     --   "NvChad/nvim-colorizer.lua",

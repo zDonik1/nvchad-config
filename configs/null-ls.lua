@@ -24,4 +24,5 @@ local sources = {
 null_ls.setup {
     debug = true,
     sources = sources,
+    on_attach = require("lsp-format").on_attach,
 }
