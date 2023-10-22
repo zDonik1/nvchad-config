@@ -131,14 +131,6 @@ local plugins = {
     },
 
     {
-        "mhartington/formatter.nvim",
-        cmd = "FormatWrite",
-        opts = function()
-            return require("custom.configs.formatter")
-        end,
-    },
-
-    {
         "sindrets/diffview.nvim",
         cmd = { "DiffviewOpen", "DiffviewFileHistory", },
     },
