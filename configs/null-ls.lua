@@ -3,7 +3,6 @@ local null_ls = require "null-ls"
 local b = null_ls.builtins
 
 local sources = {
-
     -- webdev stuff
     b.formatting.deno_fmt.with({
         extra_args = { "--indent-width", "4" },
@@ -11,10 +10,15 @@ local sources = {
     b.formatting.prettier.with { filetypes = { "html", "markdown", "css" } }, -- so prettier works only on these filetypes
 
     -- Lua
-    b.formatting.stylua,
+    b.formatting.stylua.with {
+        extra_args = { "--column_width", "80", "--indent_type", "Spaces" }
+    },
 
     -- cpp
     b.formatting.clang_format,
+
+    -- toml
+    b.formatting.taplo,
 }
 
 null_ls.setup {
