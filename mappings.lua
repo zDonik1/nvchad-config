@@ -105,4 +105,12 @@ M.trouble = {
     }
 }
 
+M.tabufline = {
+    n = {
+        ["<leader>tj"] = { "<cmd> tabnext <CR>", "Next tab" },
+        ["<leader>tk"] = { "<cmd> tabprev <CR>", "Previous tab" },
+        ["<leader>tn"] = { "<cmd> tabnew <CR>", "New tab" },
+    }
+}
+
 return M
