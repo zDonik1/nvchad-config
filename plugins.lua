@@ -138,6 +138,10 @@ local plugins = {
         end,
     },
 
+    {
+        "sindrets/diffview.nvim",
+        cmd = { "DiffviewOpen", "DiffviewFileHistory", },
+    },
     -- To make a plugin not be loaded
     -- {
     --   "NvChad/nvim-colorizer.lua",
