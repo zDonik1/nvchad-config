@@ -37,6 +37,13 @@ local plugins = {
         opts = vim.tbl_deep_extend("force", require("plugins.configs.telescope"), overrides.telescope),
     },
 
+    {
+        "lewis6991/gitsigns.nvim",
+        dependencies = {
+            "tpope/vim-fugitive",
+        },
+    },
+
     -- override plugin configs
     {
         "williamboman/mason.nvim",
